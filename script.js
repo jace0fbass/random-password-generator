@@ -14,8 +14,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // define password criteria prompts
-// define password length 8-128 characters
-
 // define uppercase, lowercase, numeric, special
 var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -28,15 +26,16 @@ var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", 
 function generatePassword() {
 lengthQuestion = confirm("How long would you like your password to be? -Between 8 and 128 digits-");
 
-lower = confirm("Would you like to use lowercase letters?");
+lowerQuestion = confirm("Would you like to use lowercase letters?");
 
-upper = confirm("Would you like to use uppercase letters?");
+upperQuestion = confirm("Would you like to use uppercase letters?");
 
-numbers = confirm("Would you like to use numbers?");
+numbersQuestion = confirm("Would you like to use numbers?");
 
-special = confirm("Would you like to use special characters?");
+specialQuestion = confirm("Would you like to use special characters?");
 
 }
+// change ok/cancel to yes/no and make the choice apply to the result
 
 
 //var result = "";
