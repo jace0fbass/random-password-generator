@@ -26,7 +26,7 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
 
 function generatePassword() {
-lengthquestion = confirm("How long would you like your password to be? -Between 8 and 128 digits-");
+lengthQuestion = confirm("How long would you like your password to be? -Between 8 and 128 digits-");
 
 lower = confirm("Would you like to use lowercase letters?");
 
