@@ -7,12 +7,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+var password = document.getElementById("password");
 
 // define uppercase, lowercase, numeric, special
 var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -40,12 +40,11 @@ numbersQuestion = confirm("Would you like to use numbers?");
 specialQuestion = confirm("Would you like to use special characters?");
   console.log( 'special choice', specialQuestion )
 // if statement here?
+
 }
 
 // change ok/cancel to yes/no and make the choice apply to the result
 
-
-//var result = "";
 
 //if else
 //return result;
