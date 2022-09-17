@@ -26,15 +26,19 @@ var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", 
 function generatePassword() {
   
 lengthQuestion = window.prompt("How long of a password would you like? Chose between 8-128 digits");
+  console.log( 'length choice:', lengthQuestion )
 
 lowerQuestion = confirm("Would you like to use lowercase letters?");
+  console.log( 'lower choice', lowerQuestion )
 
 upperQuestion = confirm("Would you like to use uppercase letters?");
+  console.log( 'upper choice', upperQuestion )
 
 numbersQuestion = confirm("Would you like to use numbers?");
+  console.log( 'numbers choice', numbersQuestion )
 
 specialQuestion = confirm("Would you like to use special characters?");
-
+  console.log( 'special choice', specialQuestion )
 // if statement here?
 }
 
