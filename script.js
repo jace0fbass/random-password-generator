@@ -13,7 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// define password criteria prompts
+
 // define uppercase, lowercase, numeric, special
 var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -24,17 +24,21 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
 
 function generatePassword() {
-lengthQuestion = confirm("How long would you like your password to be? -Between 8 and 128 digits-");
+  
+lengthQuestion = window.prompt("How long of a password would you like? Chose between 8-128 digits");
 
-lowerQuestion = confirm("Would you like to use lowercase letters?");
+lowerQuestion = prompt("Would you like to use lowercase letters?");
 
-upperQuestion = confirm("Would you like to use uppercase letters?");
+upperQuestion = prompt("Would you like to use uppercase letters?");
 
-numbersQuestion = confirm("Would you like to use numbers?");
+numbersQuestion = prompt("Would you like to use numbers?");
 
-specialQuestion = confirm("Would you like to use special characters?");
+specialQuestion = prompt("Would you like to use special characters?");
 
+// if statement here?
 }
+var index = Math.floor(Math.random() * generatePassword.length);
+var prompt = 
 // change ok/cancel to yes/no and make the choice apply to the result
 
 
@@ -45,3 +49,4 @@ specialQuestion = confirm("Would you like to use special characters?");
 
 
 //how to generate element
+generatePassword();
