@@ -1,12 +1,21 @@
 # 03 JavaScript: Password Generator
 
-## Your Task
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+--** NEEDS A SCREENSHOT **--
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
 
-## User Story
+## Deployed link
+
+https://jace0fbass.github.io/random-password-generator/
+
+
+## Description
+
+In this challenge I have added funcitionality to the webpage with Javascript. I have used prompts to have the user enter the length they want their password to be. I have used confirms to ask the user if they would like to use uppercase, lowercase, numbers, or special characters. I have defined the arrays for each text type.
+
+
+## Screenshot
+<img src="" alt="A screenshot of a webpage that generates random passwords.">
 
 ```
 AS AN employee with access to sensitive data
