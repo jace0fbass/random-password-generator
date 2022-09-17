@@ -16,7 +16,9 @@ body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
-
+h1, h2 {
+  text-align: center;
+}
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;

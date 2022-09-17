@@ -27,18 +27,17 @@ function generatePassword() {
   
 lengthQuestion = window.prompt("How long of a password would you like? Chose between 8-128 digits");
 
-lowerQuestion = prompt("Would you like to use lowercase letters?");
+lowerQuestion = confirm("Would you like to use lowercase letters?");
 
-upperQuestion = prompt("Would you like to use uppercase letters?");
+upperQuestion = confirm("Would you like to use uppercase letters?");
 
-numbersQuestion = prompt("Would you like to use numbers?");
+numbersQuestion = confirm("Would you like to use numbers?");
 
-specialQuestion = prompt("Would you like to use special characters?");
+specialQuestion = confirm("Would you like to use special characters?");
 
 // if statement here?
 }
-var index = Math.floor(Math.random() * generatePassword.length);
-var prompt = 
+
 // change ok/cancel to yes/no and make the choice apply to the result
 
 
@@ -49,4 +48,3 @@ var prompt =
 
 
 //how to generate element
-generatePassword();
