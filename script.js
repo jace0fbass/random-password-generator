@@ -66,7 +66,7 @@ function generatePassword() {
 
 
       function getRandom(arr) {
-      var randomIndex = Math.floor(Math.random() * arr.length )
+      var randomIndex = Math.floor(Math.random() * arr.length );
       var indexElement = arr[randomIndex];
       return indexElement;
     }
