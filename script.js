@@ -23,26 +23,63 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
 
-function generatePassword() {
+function userChoices() {
   
-lengthQuestion = window.prompt("How long of a password would you like? Chose between 8-128 digits");
+var lengthQuestion = parseInt(prompt("How long of a password would you like? Chose between 8-128 digits"));
+console.log( typeof lengthQuestion);
   console.log( 'length choice:', lengthQuestion )
-
-lowerQuestion = confirm("Would you like to use lowercase letters?");
+if (lengthQuestion < 8 || lengthQuestion > 128 ) {
+  alert('Please select a number between 8 and 128.')
+  return null;
+}
+if (Number.isNaN(lengthQuestion) ) {
+  alert('Please only use numbers.')
+  return null;
+}
+var lowerQuestion = confirm("Would you like to use lowercase letters?");
   console.log( 'lower choice', lowerQuestion )
 
-upperQuestion = confirm("Would you like to use uppercase letters?");
+var upperQuestion = confirm("Would you like to use uppercase letters?");
   console.log( 'upper choice', upperQuestion )
 
-numbersQuestion = confirm("Would you like to use numbers?");
+var numbersQuestion = confirm("Would you like to use numbers?");
   console.log( 'numbers choice', numbersQuestion )
 
-specialQuestion = confirm("Would you like to use special characters?");
+var specialQuestion = confirm("Would you like to use special characters?");
   console.log( 'special choice', specialQuestion )
 // if statement here?
-
+if (lowerQuestion === false && upperQuestion === false && numbersQuestion === false && specialQuestion === false) {
+  alert('You must chose at least 1 type of character.')
+  return null;
+}
+var userInput = {
+    lengthQuestion: lengthQuestion,
+    lowerQuestion: lowerQuestion,
+    upperQuestion: upperQuestion,
+    numbersQuestion: numbersQuestion,
+    specialQuestion: specialQuestion
+};
+return userInput;
 }
 
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length )
+  var indexElement = arr[randomIndex];
+  return indexElement;
+}
+
+function generatePassword() {
+  var userInfo = userChoices();
+  var sureChoice = [];
+  var ifChoice =[];
+  var finalChoice = [];
+  if (!userInfo) return null;
+if (userInfo.lowerQuestion) {
+  ifChoice = ifChoice.concat(lowerCaseChars)
+  sureChoice.push(getRandom(lowerCaseChars))
+}
+// create more ifs then for loop and run user object and randomize if choice and push it to final choice. for loop on sure choice.length and call out index of surechoice it will equal final choice. then return final choice and do a .join
+}
 // change ok/cancel to yes/no and make the choice apply to the result
 
 
