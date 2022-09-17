@@ -23,19 +23,25 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
 
+
+
 function userChoices() {
   
 var lengthQuestion = parseInt(prompt("How long of a password would you like? Chose between 8-128 digits"));
 console.log( typeof lengthQuestion);
   console.log( 'length choice:', lengthQuestion )
+
 if (lengthQuestion < 8 || lengthQuestion > 128 ) {
   alert('Please select a number between 8 and 128.')
   return null;
 }
+
 if (Number.isNaN(lengthQuestion) ) {
-  alert('Please only use numbers.')
+  alert('Please refresh the page and enter a number.')
   return null;
 }
+
+
 var lowerQuestion = confirm("Would you like to use lowercase letters?");
   console.log( 'lower choice', lowerQuestion )
 
@@ -47,11 +53,13 @@ var numbersQuestion = confirm("Would you like to use numbers?");
 
 var specialQuestion = confirm("Would you like to use special characters?");
   console.log( 'special choice', specialQuestion )
-// if statement here?
+
 if (lowerQuestion === false && upperQuestion === false && numbersQuestion === false && specialQuestion === false) {
   alert('You must chose at least 1 type of character.')
   return null;
 }
+
+
 var userInput = {
     lengthQuestion: lengthQuestion,
     lowerQuestion: lowerQuestion,
@@ -59,8 +67,11 @@ var userInput = {
     numbersQuestion: numbersQuestion,
     specialQuestion: specialQuestion
 };
+
+
 return userInput;
 }
+
 
 function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length )
@@ -68,40 +79,44 @@ function getRandom(arr) {
   return indexElement;
 }
 
+
 function generatePassword() {
   var userInfo = userChoices();
   var sureChoice = [];
   var ifChoice =[];
   var finalChoice = [];
-  if (!userInfo) return null;
-  
+if (!userInfo) return null;
+
 if (userInfo.lowerQuestion) {
   ifChoice = ifChoice.concat(lowerCaseChars)
   sureChoice.push(getRandom(lowerCaseChars))
 }
+
 if (userInfo.upperQuestion) {
-  ifChoice = ifChoice.concat(lowerCaseChars)
-  sureChoice.push(getRandom(lowerCaseChars))
+  ifChoice = ifChoice.concat(upperCaseChars)
+  sureChoice.push(getRandom(upperCaseChars))
 }
-if (userInfo.numberQuestion) {
+
+if (userInfo.numbersQuestion) {
   ifChoice = ifChoice.concat(numbers)
   sureChoice.push(getRandom(numbers))
 }
+
 if (userInfo.specialQuestion) {
   ifChoice = ifChoice.concat(specialChars)
   sureChoice.push(getRandom(specialChars))
 }
 
-// create more ifs then for loop and run user object and randomize if choice and push it to final choice. for loop on sure choice.length and call out index of surechoice it will equal final choice. then return final choice and do a .join
+// create more ifs then for loop and run user object and randomize if choice and push it to final choice. 
+
+//for loop on sure choice.length and call out index of surechoice it will equal final choice. 
+
+//then return final choice and do a .join
 }
 
 
 
 
-// change ok/cancel to yes/no and make the choice apply to the result
-
-
-//if else
 //return result;
 
 
