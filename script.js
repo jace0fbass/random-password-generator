@@ -99,9 +99,9 @@ function generatePassword() {
     ifChoice = ifChoice.concat(specialChars)
    selections.push(getRandom(specialChars))
   }
+
   
-  
-  return selections;
+  return;
   // create more ifs then for loop and run userInput and randomize if choice and push it to final choice. 
   
   //for loop on sure choice.length and call out index of surechoice it will equal final choice. 
