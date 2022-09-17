@@ -74,12 +74,30 @@ function generatePassword() {
   var ifChoice =[];
   var finalChoice = [];
   if (!userInfo) return null;
+  
 if (userInfo.lowerQuestion) {
   ifChoice = ifChoice.concat(lowerCaseChars)
   sureChoice.push(getRandom(lowerCaseChars))
 }
+if (userInfo.upperQuestion) {
+  ifChoice = ifChoice.concat(lowerCaseChars)
+  sureChoice.push(getRandom(lowerCaseChars))
+}
+if (userInfo.numberQuestion) {
+  ifChoice = ifChoice.concat(numbers)
+  sureChoice.push(getRandom(numbers))
+}
+if (userInfo.specialQuestion) {
+  ifChoice = ifChoice.concat(specialChars)
+  sureChoice.push(getRandom(specialChars))
+}
+
 // create more ifs then for loop and run user object and randomize if choice and push it to final choice. for loop on sure choice.length and call out index of surechoice it will equal final choice. then return final choice and do a .join
 }
+
+
+
+
 // change ok/cancel to yes/no and make the choice apply to the result
 
 
