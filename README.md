@@ -11,7 +11,7 @@ In this challenge I have added funcitionality to the webpage with Javascript. I 
 
 
 ## Screenshot
-<img src="images\jsChallengeScreenshot.jpg" alt="A screenshot of a webpage that generates random passwords.">
+<img src="assets\images\jsChallengeScreenshot.jpg" alt="A screenshot of a webpage that generates random passwords.">
 
 ```
 AS AN employee with access to sensitive data
@@ -43,7 +43,7 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![The Password Generator application displays a red button to "Generate Password".](images\03-javascript-homework-demo.png)
+![The Password Generator application displays a red button to "Generate Password".](assets\images\03-javascript-homework-demo.png)
 
 ## Grading Requirements
 
