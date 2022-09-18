@@ -53,7 +53,7 @@ function generatePassword() {
   }
 
   // Becomes the password.
-  var combined = "";
+  var collectedChars = "";
 
   // Adds selected characters to an array
   var userInfo = [] 
@@ -64,11 +64,11 @@ function generatePassword() {
 
   for (var i = 0; i <= lengthQuestion; i++) {
   var randomized = userInfo[Math.floor(Math.random() * userInfo.length)]
-  combined += randomized;
+  collectedChars += randomized;
   };
 
   // Sends randomized password result to the #password textarea.
-  return combined;
+  return collectedChars;
 };
 
 // Assignment Code
