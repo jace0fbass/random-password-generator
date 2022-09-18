@@ -62,7 +62,7 @@ function generatePassword() {
   if (numbersQuestion) userInfo = userInfo.concat(numbers);
   if (specialQuestion) userInfo = userInfo.concat(specialChars);
 
-  for (var i =1; i <= lengthQuestion; i++) {
+  for (var i = 0; i <= lengthQuestion; i++) {
   var randomized = userInfo[Math.floor(Math.random() * userInfo.length)]
   combined += randomized;
   };

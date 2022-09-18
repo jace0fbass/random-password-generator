@@ -7,7 +7,7 @@ https://jace0fbass.github.io/random-password-generator/
 
 ## Description
 
-In this challenge I have added funcitionality to the webpage with Javascript. I have used prompts to have the user enter the length they want their password to be. I have used confirms to ask the user if they would like to use uppercase, lowercase, numbers, or special characters. I have defined the arrays for each text type.
+In this challenge I have added funcitionality to the webpage with Javascript. I have used prompts to have the user enter the length they want their password to be. I have used confirms to ask the user if they would like to use uppercase, lowercase, numbers, or special characters. I have defined the arrays for each text type. I have used while loops to loop through information to fulfill the input requirement. I used conditional statements to keep the code in proper function. I used && to ensure the user enters at least 1 type of character value. I have used || to combine conditions in a conditional statement constraining the user to a fixed set of numbers. I have used concatination to add character types selected by the user to an array. This challenge turned up the heat!
 
 
 ## Screenshot
