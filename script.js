@@ -5,38 +5,79 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 function generatePassword() {
-  var userInfo = userChoices();
+  var lengthQuestion = Number(prompt("How long of a password would you like? Chose between 8-128 digits"));
+  console.log( typeof lengthQuestion);
+  console.log( 'length choice:', lengthQuestion )
+  while (lengthQuestion < 8 || lengthQuestion> 128 || isNaN(lengthQuestion)) {
+    if (lengthQuestion < 8 || lengthQuestion > 128 || isNaN(lengthQuestion)) {
+      if (Number.isNaN(lengthQuestion) ) {
+        alert('Please enter a number.')
+        return null;
+      }
+      if (lengthQuestion < 8 || lengthQuestion > 128 ) {
+        alert('Please select a number between 8 and 128.')
+        return null;
+      }
+      lengthQuestion = Number(prompt("How long of a password would you like? Chose between 8-128 digits"));
+    }
+  };
+  
+  var lowerQuestion = confirm("Would you like to use lowercase letters?");
+  console.log( 'lower choice', lowerQuestion )
+  
+  var upperQuestion = confirm("Would you like to use uppercase letters?");
+  console.log( 'upper choice', upperQuestion )
+  
+  var numbersQuestion = confirm("Would you like to use numbers?");
+  console.log( 'numbers choice', numbersQuestion )
+  
+  var specialQuestion = confirm("Would you like to use special characters?");
+  console.log( 'special choice', specialQuestion )
+  
+  if (lowerQuestion === false && upperQuestion === false && numbersQuestion === false && specialQuestion === false) {
+    alert('You must chose at least 1 type of character.')
+    return null;
+  }
+}
+
+var combined = "";
+
+if (!userInfo) return null;
+
+if (userInfo.lowerQuestion) {
+  ifChoice = ifChoice.concat(lowerCaseChars)
+  selections.push(getRandom(lowerCaseChars))
+}
+
+if (userInfo.upperQuestion) {
+  ifChoice = ifChoice.concat(upperCaseChars)
+  selections.push(getRandom(upperCaseChars))
+}
+
+if (userInfo.numbersQuestion) {
+  ifChoice = ifChoice.concat(numbers)
+  selections.push(getRandom(numbers))
+}
+
+if (userInfo.specialQuestion) {
+  ifChoice = ifChoice.concat(specialChars)
+  selections.push(getRandom(specialChars))
+}
+
+
+
+ 
+
+ var userInfo = userChoices();
   var ifChoice =[];
   var selections = []; {
     
-    for (var i = 0; i < getRandom.length; i++) {
+    for (var i = 0; i < ; i++) {
       upperCaseChars[i] = lowerCaseChars[i].toUpperCase()
       console.log('Loop there it is');
     }
   }
-  if (!userInfo) return null;
-  
-  if (userInfo.lowerQuestion) {
-    ifChoice = ifChoice.concat(lowerCaseChars)
-    selections.push(getRandom(lowerCaseChars))
-  }
-  
-  if (userInfo.upperQuestion) {
-    ifChoice = ifChoice.concat(upperCaseChars)
-    selections.push(getRandom(upperCaseChars))
-  }
-  
-  if (userInfo.numbersQuestion) {
-    ifChoice = ifChoice.concat(numbers)
-    selections.push(getRandom(numbers))
-  }
-  
-  if (userInfo.specialQuestion) {
-    ifChoice = ifChoice.concat(specialChars)
-    selections.push(getRandom(specialChars))
-  }
-  
-  function getRandom(arr) {
+ /* function getRandom(arr) {
     var randomIndex = Math.floor(Math.random() * arr);
     var indexElement = arr[randomIndex];
     return indexElement;
@@ -45,8 +86,6 @@ function generatePassword() {
   return;
 }
 
-
-function userChoices() {
   var lengthQuestion = Number(prompt("How long of a password would you like? Chose between 8-128 digits"));
   console.log( typeof lengthQuestion);
   console.log( 'length choice:', lengthQuestion )
