@@ -15,7 +15,7 @@ In this challenge I have added funcitionality to the webpage with Javascript. I 
 
 
 ## Screenshot
-<img src="" alt="A screenshot of a webpage that generates random passwords.">
+<img src="jsChallengeScreenshot.jpg" alt="A screenshot of a webpage that generates random passwords.">
 
 ```
 AS AN employee with access to sensitive data
