@@ -1,9 +1,5 @@
 # 03 JavaScript: Password Generator
 
-
---** NEEDS A SCREENSHOT **--
-
-
 ## Deployed link
 
 https://jace0fbass.github.io/random-password-generator/
