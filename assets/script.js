@@ -15,7 +15,7 @@ function generatePassword() {
   console.log( "length choice:", lengthQuestion )
 
   // Cycles through the results until the input requirements are fulfilled.
-  while (lengthQuestion < 8 || lengthQuestion> 128 || isNaN(lengthQuestion)) {
+  while (lengthQuestion < 8 || lengthQuestion > 128 || isNaN(lengthQuestion)) {
     if (lengthQuestion < 8 || lengthQuestion > 128 || isNaN(lengthQuestion)) {
 
       // Doesn't allow the user to proceed through the confirms if they don't enter a number type value.
