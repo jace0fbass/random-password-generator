@@ -7,6 +7,7 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
+// The value called out at the end of this function will be the password.
 function generatePassword() {
 
   // Asks the user to select how long they want their password to be.
@@ -64,10 +65,11 @@ function generatePassword() {
 
   for (var i = 0; i <= lengthQuestion; i++) {
   var randomized = userInfo[Math.floor(Math.random() * userInfo.length)]
+  // Adds the value of randomized to collectedChars.
   collectedChars += randomized;
   };
 
-  // Sends randomized password result to the #password textarea.
+  // Ends function and sends collectedChars to be called out in generatePassword function().
   return collectedChars;
 };
 
