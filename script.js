@@ -1,4 +1,4 @@
-
+// All possible characters indexed in arrays. The user will select which character types they would like to include in their randomly generated password.
 var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var upperCaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -7,19 +7,24 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
-// Asks the user to select how long they want their password to be.
 function generatePassword() {
+
+  // Asks the user to select how long they want their password to be.
   var lengthQuestion = Number(prompt("How long of a password would you like? Choose between 8-128 digits"));
   console.log( typeof lengthQuestion);
   console.log( "length choice:", lengthQuestion )
 
-  // Cycle through the results until the input is valid.
+  // Cycles through the results until the input requirements are fulfilled.
   while (lengthQuestion < 8 || lengthQuestion> 128 || isNaN(lengthQuestion)) {
     if (lengthQuestion < 8 || lengthQuestion > 128 || isNaN(lengthQuestion)) {
+
+      // Doesn't allow the user to proceed through the confirms if they don't enter a number type value.
       if (Number.isNaN(lengthQuestion) ) {
         alert("Please enter a number.")
         return null;
       }
+
+      // Doesn't allow the user to proceed through the confrims if the number for their password length is less than 8 or more than 128.
       if (lengthQuestion < 8 || lengthQuestion > 128 ) {
         alert("Please select a number between 8 and 128.")
         return null;
@@ -28,7 +33,7 @@ function generatePassword() {
     }
   };
 
-  // Asks the user to confirm if they want to use different character types.
+  // Asks the user to confirm which character types they would like to use for their password.
   var lowerQuestion = confirm("Would you like to use lowercase letters?");
   console.log( "lower choice", lowerQuestion )
 
@@ -46,11 +51,13 @@ function generatePassword() {
     alert("You must chose at least 1 type of character.")
     return null;
   }
-// Becomes the password.
+
+  // Becomes the password.
   var combined = "";
 
-  // adds selected characters to an array
-  var userInfo = [].concat(lowerQuestion);
+  // Adds selected characters to an array
+  var userInfo = [] 
+  if (lowerQuestion) userInfo = userInfo.concat(lowerCaseChars);
   if (upperQuestion) userInfo = userInfo.concat(upperCaseChars);
   if (numbersQuestion) userInfo = userInfo.concat(numbers);
   if (specialQuestion) userInfo = userInfo.concat(specialChars);
@@ -60,6 +67,7 @@ function generatePassword() {
   combined += randomized;
   };
 
+  // Sends randomized password result to the #password textarea.
   return combined;
 };
 
