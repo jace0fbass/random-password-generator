@@ -6,9 +6,7 @@ var specialChars = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", 
 
 function generatePassword() {
   var userInfo = userChoices();
-  var sureChoice = [];
   var ifChoice =[];
-  var finalChoice = [];
   var selections = []; {
     
     for (var i = 0; i < getRandom.length; i++) {
@@ -45,12 +43,8 @@ function generatePassword() {
   }
   
   return;
-  // create more ifs then for loop and run userInput and randomize if choice and push it to final choice. 
-  
-  //for loop on sure choice.length and call out index of surechoice it will equal final choice. 
-  
-  //then return final choice and do a .join
 }
+
 
 function userChoices() {
   var lengthQuestion = Number(prompt("How long of a password would you like? Chose between 8-128 digits"));
